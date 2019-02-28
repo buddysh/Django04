@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+    {% block css %}
+        <style>
+            .header{
+
+                background-color: coral;
+            }
+        </style>
+    {% endblock %}
+
+    {% block content %}
+
+        {{ name|upper }}
+        {{ score }}
+        <br>
+
+        <ul>
+            <li>编号 --姓名-年龄-分数</li>
+        {% for item in abc %}
+
+            <li>
+             {{ forloop.counter }}---{{ item.s_name }}--{{ item.s_age }}--{{ item.s_score }}
+            </li>
+        {% endfor %}
+        </ul>
+
+        {{ haha|default:'不存在' }}
+
+
+        <ul>
+            <li>苹果</li>
+            <li>句子</li>
+        </ul>
+
+    {% endblock %}

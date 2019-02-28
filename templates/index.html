@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>欢迎页面</title>
+{% endblock %}
+
+
+{% block content %}
+    <p>
+        <a href="{% url 'app:testpage' %}">测试页面</a>
+    </p>
+    <p>
+        <a href="{% url 'app:addstu' %}">添加学生</a>
+    </p>
+{% endblock %}
